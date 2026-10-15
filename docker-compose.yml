@@ -1,0 +1,11 @@
+
+services:
+  localstack:
+    image: localstack/localstack:4.10
+    container_name: cloudflow-localstack
+    ports:
+      - "4566:4566"
+    environment:
+      SERVICES: sqs,dynamodb
+      AWS_DEFAULT_REGION: us-east-1
+
